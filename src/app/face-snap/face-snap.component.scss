@@ -1,8 +1,49 @@
 .snap{
-    width: 50%;
-    height: 40%;
+    width: 40%;
+    margin:20px auto;
+    box-shadow: lightgray 4px 4px 20px;
+    padding:10px 30px;
+    Img{
+        width: 100%;
+    }
+    button{
+        font-size: 16px;
+        background-color: transparent;
+        border: none;
+        padding:10px 5px;
+        box-shadow: lightgray 3px 3px 7px;
+        outline: none;
+        box-sizing: border-box;
+        margin-right: 20px;
+        &:active{
+            transform: translate(1px 1px);
+            box-shadow: 0 0 5px;
+        }
+    }
+    h2{
+        font-size: 40px;
+        margin: 10 10px;
+        font-weight: 800;
+        font-family:'Roboto', sans-serif;
+    }
+    p{
+        font-size: 17px;
+        margin-bottom: 15px;
+        font-weight: 200;
+        font-family:'Roboto', sans-serif;
+    }
+    h5,h6{
+        font-size: 16px;
+        font-weight: 100;
+        margin: 10px 10px;
+        font-family:'Roboto', sans-serif;
+    }
 }
-.snapImg{
-    width: 50%;
-    height: 30%;
+
+
+.facesnap{
+    width: 38%;
+    margin:15px auto;
+    box-shadow:rgb(119, 172, 119) 8px 8px 20px;
+    padding:10px 30px;
 }

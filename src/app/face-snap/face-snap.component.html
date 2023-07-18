@@ -1,7 +1,17 @@
-<div class="snap">
-    <h2> {{facesnap.title}} </h2>
-    <img [src]="facesnap.imgUrl" [alt]="facesnap.title" class="snapImg">
-    <p> {{facesnap.description}} </p>
-    <h5> {{facesnap.dateCreation}} </h5>
-    <p><button (click)="surLike()">Like</button>{{facesnap.nombreLike}} Like</p>
-</div>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="snap" [ngClass]="{facesnap:  boutonText=='Vous aimez déjà'}">
+        <h2> {{facesnap.title}} </h2>
+        <p> {{facesnap.description}} </p>
+        <img [src]="facesnap.imgUrl" [alt]="facesnap.title" class="snapImg">
+        <h5> {{facesnap.dateCreation}} </h5>
+        <h6>Photo prise à {{facesnap.localisation}} </h6>
+        <p><button (click)="surLike()"> {{boutonText}} </button> <span [ngStyle]="{ color:'rgb(0,'+255*facesnap.nombreLike +',0)'}">{{facesnap.nombreLike}}</span></p>
+    </div>
+    
+
+</body>

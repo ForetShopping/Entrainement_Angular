@@ -8,12 +8,15 @@ import { Facesnap } from '../model/Facesnap';
 })
 export class FaceSnapComponent {
   @Input() facesnap!:Facesnap;
-
+  boutonText:string ="J'aime";
   surLike(){
       if(this.facesnap.nombreLike==0){
         this.facesnap.nombreLike++;
-      }else{
-        this.facesnap.nombreLike--;
-      }
+        this.boutonText="Vous aimez déjà";
+     }else{
+      this.facesnap.nombreLike--;
+      this.boutonText ="J'aime";
+
+     }
   }
 }

@@ -7,20 +7,54 @@ import { Facesnap } from './model/Facesnap';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  mySnap!:Facesnap;
-  mySnap1!:Facesnap;
+ 
+  listFacesnap!:Facesnap[];
+
   ngOnInit(){
-    this.mySnap= new Facesnap('Voiture Bugatti',
-                               'la voiture de luxe de toutes les générations',
-                               new Date() ,
-                                0,
-                                'https://cdn-s-www.ledauphine.com/images/834FFF93-8183-4640-88EE-DED51128BDDA/NW_detail/bugatti-symbolise-l-automobile-ultime-entre-performances-style-et-luxe-c-est-aussi-un-gage-d-exclusivite-photo-bugatti-1614849511.jpg');
-  
-     this.mySnap1= new Facesnap('Voiture Mercedez',
-                                'la voiture de luxe de toutes les générations de haut niveau de l\'Allemagne',
-                                new Date() ,
-                                 0,
-                                 'https://votrechauffeur.ma/assets/images/blog/55c94-mercedes-benz.jpg');
-   
-                              }
+    this.listFacesnap=[
+    {  title:'Voiture Bugatti',
+    description:'la voiture de luxe de toutes les générations',
+    dateCreation:new Date() ,
+    nombreLike:0,
+    imgUrl:'https://cdn.motor1.com/images/mgl/wBNQm/s1/bugatti-la-voiture-noire.webp',
+    localisation:"Etats Unis d'Amerique"
+  },
+  {
+    title:'Voiture Mercedez',
+    description:'la voiture de luxe de toutes les générations de haut niveau de l\'Allemagne',
+    dateCreation:new Date() ,
+     nombreLike:0,
+     imgUrl:'https://votrechauffeur.ma/assets/images/blog/55c94-mercedes-benz.jpg'},
+     {
+      title:'Voiture Mazda',
+      description:'la voiture de luxe pour les moins riche qui se veulent une voiture Coooool !',
+      dateCreation:new Date() ,
+      nombreLike:0,
+      imgUrl:'https://www.groupe-parot.com/sites/zanzicar/files/inline-images/mazda-6_2.jpg',
+      localisation:"France - Paris"
+    },
+    {  title:'Voiture Bugatti',
+    description:'la voiture de luxe de toutes les générations',
+    dateCreation:new Date() ,
+    nombreLike:0,
+    imgUrl:'https://cdn.motor1.com/images/mgl/wBNQm/s1/bugatti-la-voiture-noire.webp',
+    localisation:"Etats Unis d'Amerique"
+  },
+  {
+    title:'Voiture Mercedez',
+    description:'la voiture de luxe de toutes les générations de haut niveau de l\'Allemagne',
+    dateCreation:new Date() ,
+     nombreLike:0,
+     imgUrl:'https://votrechauffeur.ma/assets/images/blog/55c94-mercedes-benz.jpg'},
+     {
+      title:'Voiture Mazda',
+      description:'la voiture de luxe pour les moins riche qui se veulent une voiture Coooool !',
+      dateCreation:new Date() ,
+      nombreLike:0,
+      imgUrl:'https://www.groupe-parot.com/sites/zanzicar/files/inline-images/mazda-6_2.jpg',
+      localisation:"France - Paris"
+    }
+  ];
+
+             }
 }

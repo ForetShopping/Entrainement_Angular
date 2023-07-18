@@ -1,2 +1,1 @@
-<app-face-snap [facesnap]="mySnap"></app-face-snap>
-<app-face-snap [facesnap]="mySnap1"></app-face-snap>
+<app-face-snap *ngFor=" let mySnap of listFacesnap" [facesnap]="mySnap" ></app-face-snap>
